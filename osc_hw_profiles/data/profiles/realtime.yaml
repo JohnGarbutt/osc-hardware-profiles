@@ -1,0 +1,26 @@
+profile:
+  metadata:
+    name: realtime
+    version: 22.0.0
+    description: |
+      This profile optimizes for realtime workloads
+    supported_virt_drivers:
+      - libvirt
+  parents:
+    modern: 22.0.0
+    "memory-latency": 22.0.0
+  flavor:
+    extra_specs:
+      libvirt:
+        "hw:cpu_policy": dedicated
+        "hw:cpu_realtime": true
+        "hw:cpu_realtime_mask": "^0"
+        "hw:pmu": off
+
+  image:
+    metadata:
+      libvirt:
+        hw_cpu_policy: dedicated
+        hw_cpu_realtime: true
+        hw_cpu_realtime_mask: "^0"
+        hw_pmu: off

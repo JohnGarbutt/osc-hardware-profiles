@@ -1,0 +1,28 @@
+profile:
+  metadata:
+    name: memory-latency
+    version: 22.0.0
+    description: |
+      This profile optimizes for memory latency
+      by using hugepage memory backing.
+    supported_virt_drivers:
+      - libvirt
+      - hyperv
+
+  parents:
+    base: 22.0.0
+  flavor:
+    extra_specs:
+      libvirt:
+        "hw:mem_page_size": large
+  image:
+    metadata:
+      libvirt:
+        hw_mem_page_size: large
+  optimizations:
+    libvirt:
+      - cpu_topology
+      - numa
+      - numa_topology
+    hyperv:
+      - numa

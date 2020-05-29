@@ -1,0 +1,15 @@
+profile:
+  metadata:
+    name: nfv
+    version: 22.0.0
+  parents:
+    modern: 22.0.0
+    "memory-latency": 22.0.0
+  flavor:
+    extra_specs:
+      libvirt:
+        "hw:pci_numa_affinity_policy": required
+  image:
+    metadata:
+      libvirt:
+        hw_pci_numa_affinity_policy: required

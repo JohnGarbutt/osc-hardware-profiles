@@ -1,0 +1,31 @@
+parameter_definitions:
+  supported_features:
+    type: "List"
+    description: "a list of supported features"
+  max_threads_per_core:
+    type: "Integer"
+    min: 1
+    max: null
+    description: "The maxium number of logical hardware threads per core"
+  max_cores_per_numa_node:
+    type: "Integer"
+    min: 0
+    max: null
+    description: "The maxium number of physical cpu cores per numa node"
+  max_numa_nodes_per_socket:
+    type: "Integer"
+    min: 0
+    max: null
+    description: "The maxium number of numa nodes per cpu socket"
+  max_sockets_per_host:
+    type: "Integer"
+    min: 0
+    max: null
+    description: "The maxium number of cpu sockets per host"
+  supported_mem_page_size:
+    type: "List"
+    description: "A list of the possible memory page sizes supported on the plathform"
+  supported_virt_drivers:
+    type: "List"
+    description: "A list of virt driver that are supported on this plathform"
+

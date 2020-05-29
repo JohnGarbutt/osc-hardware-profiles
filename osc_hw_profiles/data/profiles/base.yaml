@@ -1,0 +1,13 @@
+profile:
+  metadata:
+    name: base
+    version: 22.0.0
+  parents: null
+  flavor:
+    extra_specs: null
+  image:
+    metadata: null
+  optimizations: null
+  traits:
+    required: null
+    forbidden: null

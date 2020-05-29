@@ -1,0 +1,24 @@
+profile:
+  metadata:
+    name: legacy
+    version: 22.0.0
+    description: |
+      This profile optimizes for legacy operating systems.
+      It should not be used unless creating image that are
+      incompatible with the modern profile.
+    supported_virt_drivers:
+      - libvirt
+      - hyperv
+  parents:
+    base: 22.0.0 
+  image:
+    metadata:
+      libvirt:
+        hw_machine_type: pc
+        hw_disk_bus: sata
+        hw_cdrom_bus: ide
+        hw_rescue_bus: ide
+        hw_video_model: cirrus
+        hw_vif_model: e1000
+      hyperv:
+        hw_machine_type:  hyperv-gen1

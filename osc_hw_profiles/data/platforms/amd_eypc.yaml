@@ -1,0 +1,16 @@
+platform:
+  metadata:
+    name: amd_eypc
+    version: 22.0.0
+  parents:
+   name: x86_64
+   version: 22.0.0
+  parameters:
+    max_sockets_per_host: 4
+    max_numa_per_socket: 16
+    max_cores_per_numa_node: 4
+    max_threads_per_core: 2
+  virt_driver_parameters:
+    libvirt:
+      supported_features:
+        - sev

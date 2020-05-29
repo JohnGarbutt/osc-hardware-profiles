@@ -1,0 +1,25 @@
+profile:
+  metadata:
+    name: sriov
+    version: 22.0.0
+    description: |
+      This profile optimizes for memory latency
+      by using hugepage memory backing.
+    supported_virt_drivers:
+      - libvirt
+
+  parents:
+    modern: 22.0.0
+  flavor:
+    extra_specs:
+      libvirt:
+        "hw:pci_numa_affinity_policy": preferred
+  image:
+    metadata:
+      libvirt:
+        "hw_pci_numa_affinity_policy": preferred
+  optimizations:
+    libvirt:
+      - cpu_topology
+      - numa
+      - numa_topology

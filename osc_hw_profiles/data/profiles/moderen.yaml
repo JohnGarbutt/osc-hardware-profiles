@@ -1,0 +1,33 @@
+profile:
+  metadata:
+    name: modern
+    version: 22.0.0
+    description: |
+      This profile optimizes for modern operating systems
+      and should be the default for all new flavors and images
+    supported_virt_drivers:
+      - libvirt
+      - hyperv
+  parents:
+    base: 22.0.0 
+  flavor:
+    extra_specs:
+      libvirt:
+        "hw:emulator_threads_policy" : shared
+  image:
+    metadata:
+      libvirt:
+        hw_machine_type: q35
+        hw_disk_bus: scsi
+        hw_scsi_model: virtio-scsi
+        hw_cdrom_bus: scsi
+        hw_rescue_bus: sata
+        hw_video_model: virtio
+        hw_serial_port_count: 0
+        hw_vif_multiqueue_enabled: true
+        hw_emulator_threads_policy" : shared
+      hyperv:
+        hw_machine_type:  hyperv-gen2
+  optimizations:
+    libvirt:
+      - cpu_topology

@@ -1,0 +1,18 @@
+platform:
+  metadata:
+    name: base
+    version: 22.0.0
+  parent: null
+  parameters:
+    supported_mem_page_size:
+      - small
+      - 4k
+    max_threads_per_core: 1
+    max_cores_per_numa_node: null
+    max_numa_nodes_per_socket: 1
+    max_sockets_per_host: 1
+    supported_features: null
+    supported_virt_drivers: null
+  traits:
+    required: null
+    forbidden: null

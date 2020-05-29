@@ -1,0 +1,34 @@
+platform:
+  metadata:
+    name: x86_64
+    version: 22.0.0
+  parent:
+   name: base
+   version: 22.0.0
+  parameters:
+    supported_mem_page_size:
+      - small
+      - large
+      - 4K
+      - 2M
+      - 1G
+    supported_virt_drivers:
+      - libvirt
+      - vmware
+      - hyperv
+      - ironic
+    max_sockets_per_host: 4
+    max_numa_per_socket: 2
+    max_threads_per_core: 2
+  virt_driver_parameters:
+    libvirt:
+      supported_features:
+        - cpu_pinning
+        - cpu_topology
+        - realtime
+        - numa
+        - numa_topology
+        - mem_page_size
+    hyperv:
+      supported_features:
+        - numa
