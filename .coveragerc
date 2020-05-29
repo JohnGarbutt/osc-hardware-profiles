@@ -1,0 +1,6 @@
+[run]
+branch = True
+source = osc_hw_profiles
+
+[report]
+ignore_errors = True
